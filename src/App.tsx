@@ -1,24 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Hello from './components/Hello'
+import Counter from './components/Counter';
+
+
 
 function App() {
+  let age:number = 26;
+  let employeeInfo= {
+    companyName:"iplex",
+    location:"islamabad",
+    companyType:"software house"
+
+  }
+  let arr:Array<number> = [1,2,3,4]
+  let count:number = 0;
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Hello name="Rehmat karim" age={age} jobTitle="React Js Developer" employeeInfo={employeeInfo} numbers={arr}/>
+      <div>
+        <Counter count={count}/>
+      </div>
     </div>
   );
 }
